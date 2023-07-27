@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet" />
+    <link rel="icon" href="/images/volleyball-icon.svg">
+    <link rel="stylesheet" href="main.css" />
+
+    <title>VolleyBall - Padina</title>
+</head>
+
+<body class="bg-gray-800 text-white flex flex-col min-h-screen">
+  <!-- Navigation Banner -->
+  <div class="flex items-center justify-center h-16 bg-gray-900 text-white">
+      <div class="text-xl font-bold">
+          Volleyball<span class="bg-yellow-300 rounded-md px-2 py-1 ml-2 text-black">Padina</span>
+      </div>
+  </div>
+  
+  <div class="flex-grow mb-5 w-resp backdrop-blur-md bg-opacity-20 bg-gray-900 rounded-lg shadow-md mt-20 mx-auto max-w-8xl">
+      <div class="h-4/5 p-8 rounded-lg mt-10 mx-auto">
+          <!-- Banner -->
+          <div class="text-center mb-10 p-5 border-b-2 border-white">
+              <h2 class="text-xl font-bold">26. JUL - 07. AVGUST</h2>
+          </div>
+
+          <!-- Tabs container -->
+          <div class="flex justify-center mb-10">
+              <!-- Schedule tab -->
+              <div id="scheduleTab" class="flex-1 p-2 text-center bg-gray-700 text-white font-bold rounded-tl-lg rounded-bl-lg sm:rounded-bl-none active:bg-blue-500 active:text-white focus:bg-blue-500 focus:text-white">
+                  <a href="#" class="block py-2" onclick="switchTab('scheduleTab', 'scheduleContent')">TEAMS</a>
+              </div>
+
+              <!-- Matches tab -->
+              <div id="matchesTab" class="flex-1 p-2 text-center bg-gray-600 text-white font-bold rounded-tr-lg rounded-br-lg sm:rounded-br-none active:bg-blue-500 active:text-white focus:bg-blue-500 focus:text-white">
+                  <a href="#" class="block py-2" onclick="switchTab('matchesTab', 'matchesContent')">MATCHES</a>
+              </div>
+          </div>
+
+          <!-- Tab content -->
+          <div id="scheduleContent" class="mt-4">
+              <!-- Content of the Schedule tab -->
+          </div>
+
+          <div id="matchesContent" class="mt-4 hidden">
+              <div class="team-vs-inputs">
+                  <!-- Input for team vs team -->
+              </div>
+          </div>
+      </div>
+  </div>
+
+   <!-- Voting button -->
+   <div class="flex justify-center mt-8">
+    <button class="bg-gray-700 text-white px-4 py-2 rounded" onclick="showTooltip()">
+        Vote for MVP
+    </button>
+</div>
+<div class="text-center mt-2">
+    <span id="tooltip" class="text-sm hidden bg-yellow-300 text-black p-1 rounded">
+        This starts on 7th of August
+    </span>
+</div>
+
+<!-- Footer container with Sponsors -->
+<div class="bg-opacity-20 backdrop-blur-md bg-gray-800 p-8 text-center mt-10 rounded-lg shadow-md">
+  <div class="max-w-6xl mx-auto">
+    <!-- Sponsor images -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 justify-center">
+      <div class="flex justify-center items-center">
+        <img src="https://internationalpadel.com/wp-content/uploads/2014/03/logo-adidas-02.jpg" alt="Sponsor 1" class="h-16 w-auto" />
+      </div>
+      <div class="flex justify-center items-center">
+        <img src="https://fullstop360.com/blog/wp-content/uploads/2021/12/Woolmark-Cool-Logo-Ideas.jpg" alt="Sponsor 2" class="h-16 w-auto" />
+      </div>
+      <div class="flex justify-center items-center">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGIRZIB8S4otitmkihelAR1O-qKL5MJkramaM367UsL08G5atLTzge8IkzfIDDcUPWD1Y&usqp=CAU" alt="Sponsor 3" class="h-16 w-auto" />
+      </div>
+      <div class="flex justify-center items-center">
+        <img src="https://www.britishairways.com/assets/images/MediaHub/Media-Database/Rights-managed-RM/Partners/Brand-partners/paramount-plus-logo_1200x675.jpg" alt="Sponsor 4" class="h-16 w-auto" />
+      </div>
+      <div class="flex justify-center items-center">
+        <img src="https://www.goodnes.com/sites/g/files/jgfbjl131/files/gdn_brand/VA_HPOCK_HotPocketsLogo_02_20210325.png" alt="Sponsor 5" class="h-16 w-auto" />
+      </div>
+      <div class="flex justify-center items-center">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoB44AUXs8ebenXqjWMD6q1V8sQ_MsUhBNEQ&usqp=CAU" alt="Sponsor 6" class="h-16 w-auto" />
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Bottom Footer -->
+  <footer class="p-8 text-white text-center bg-gray-900 border-t-2 border-white">
+    <span class="bg-yellow-300 rounded-md px-2 py-1 ml-2 text-black font-bold">Team Padina</span> All Rights Reserved 2023
+  </footer>
+
+  <script src="teams.js"></script>
+  <script src="matches.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

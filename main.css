@@ -1,0 +1,113 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background:
+  linear-gradient(
+    rgba(0, 0, 0, 0.712),
+    rgba(0, 0, 0, 0.5)
+  ),
+  url('/images/volleyball-background.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.team-section {
+    margin: 0 auto;
+    border: 1px solid #ccc; 
+    border-radius: 8px;
+    padding: 20px; 
+    margin-bottom: 20px;
+    overflow: hidden; 
+  }
+  
+  .team-section .team-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .team-section .team-info h3 {
+    flex-grow: 1; 
+    margin: 0; 
+  }
+
+  .team-section .accordion-button {
+    flex-shrink: 0; 
+  }
+
+  .match-info {
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0;
+    font-weight: bold;
+  }
+
+  .match-group {
+    display: block; 
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 8px;
+    margin-bottom: 12px;
+  }
+  
+  .team-name {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-bottom: 8px; 
+  }
+  
+  .vs {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  
+  .match-time {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+/* Glassmorphism to the centered container */
+.flex-grow {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Adjust the style of the team member names when the accordion is open */
+.text-left {
+  text-align: left;
+  color: #fff;
+}
+
+/* Mximum width of 640px (smallest tablets and below) */
+@media (max-width: 640px) {
+  .team-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-button-container {
+    margin-top: 10px; 
+  }
+}
+
+/* Minimum width of 701px (larger tablets and desktops) */
+@media (min-width: 701px) {
+  .team-info {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .team-button-container {
+    margin-top: 0;
+    margin-left: auto; 
+  }
+}
+
+/* Screens with a minimum width of 769px (larger tablets and desktops) */
+@media (min-width: 768px) {
+  .w-resp {
+    width: 80%;
+  }
+}
+
